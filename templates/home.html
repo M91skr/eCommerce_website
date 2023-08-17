@@ -1,0 +1,60 @@
+{% extends 'bootstrap/base.html' %}
+
+# ----------------------------------------  Read styles.css ----------------------------------------
+
+{% block styles %}
+{{ super() }}
+<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+{% endblock %}
+
+# ---------------------------------------- Header Definition ----------------------------------------
+
+{% block title %}Products{% endblock %}
+
+# ---------------------------------------- Body Table Definition ----------------------------------------
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Products</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('login') }}">Log In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Shopping Basket</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
+        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+            {% for item in products: %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="clearfix mb-3">
+                        <span class="float-start badge rounded-pill bg-primary">{{item.product_name}}</span>
+                    </div>
+                <img src="{{item.product_image}}" class="card-img-top" alt="product image">
+                <div class="card-body">
+                    <div class="text-center my-4">
+                        <a href="{{ url_for('add_item', product_id=item.id) }}" class="btn btn-warning">Check offer</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+

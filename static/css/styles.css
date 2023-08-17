@@ -1,0 +1,119 @@
+body{
+    background: #91C8E4;
+}
+
+.navbar{
+    background: #F6F4EB;
+    color: #4682A9;
+}
+
+.navbar-nav{
+    list-style-type: none;
+}
+
+.navbar-brand .nav-link{
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.nav-item{
+    margin: 15px 70px 0px 70px;
+}
+
+.navbar-brand{
+    margin: 0px 70px 0px 70px;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.card-img-top{
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    padding: 30px
+}
+
+.container-fluid{
+    max-width: 800px
+}
+
+.card{
+    background: #F6F4EB;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    border: 0;
+    border-radius: 1rem;
+    margin: 20px 0px;
+}
+
+.card-img, .card-img-top{
+    border-top-left-radius: calc(1rem - 1px);
+    border-top-right-radius: calc(1rem – 1px)
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+}
+
+.btn{
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 50px 5px 50px;
+    margin: 0px 0px 50px 0px;
+}
+
+.box .btn{
+    font-size: 1.5rem
+}
+
+.btn-warning{
+    background: none #4682A9;color: #ffffff;
+    fill: #ffffff;border: none;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: -1px 6px 19px rgba(247, 129, 10, 0.25);
+    border-radius: 100px
+}
+
+.btn-warning:hover{
+    background: none #ff962b;
+    color: #ffffff;
+    box-shadow: -1px 6px 13px rgba(255, 150, 43, 0.35)
+}
+
+.badge{
+    background: #F6F4EB;
+    color: #4682A9;
+    font-size: 30px;
+    margin: 30px 0px 0px 0px;
+}
+
+.clearfix{
+    text-align: center;
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+    .nav-item{
+    margin: 15px 50px 0px 50px;
+}
+
+.navbar-brand{
+    margin: 0px 50px 0px 50px;
+}
+}
+
+@media only screen and (max-width: 1127px) {
+  /* For desktop: */
+        .nav-item{
+    margin: 15px 30px 0px 30px;
+}
+
+.navbar-brand{
+    margin: 0px 70px 0px 70px;
+}
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Basket{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="title">Welcome, {{ name }}!</h1>
+    <h3>Shopping Basket</h3>
+     <div class="container">
+         <table class="table">
+             <thead>
+             <th>Product Name</th>
+             <th>Procuct Price</th>
+             </thead>
+             <tbody>
+             {% for i,j in selected: %}
+             <tr>
+                 <td>
+                     {{i.product_name}}
+                 </td>
+                 <td>
+                     {{j.product_price}}
+                 </td>
+             </tr>
+             price +={{j.product_price}}
+             {% endfor %}
+             </tbody>
+         </table>
+    </div>
+    <a class="badge" href="{{url_for('pay', price=price)}}">Payment</a><br>
+</div>
+{% endblock %}
